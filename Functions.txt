@@ -1,0 +1,29 @@
+def corners(Ncorners,size):
+    for X in range(Ncorners):
+        fd(size)
+        rt(360/Ncorners)
+def makesquares(nsquares, size,btwn):
+    for X in range(nsquares):
+        square(size,True)
+        size = size + btwn
+def flower(npetals,radius):
+    for x in range(npetals):
+        fill(color=(0,0,255))
+        circle(radius)
+        rt(360/npetals)
+    fill(color=(255,0,0))
+    circle(radius/2,True)
+def flowers(npetals,radius,nfullflowers,steel):
+    home()
+    color(100,255,120)
+    for X in range(nfullflowers):
+        fd(steel)
+        flower(npetals,radius)
+        home()
+        rt((X+1)*(360/nfullflowers))
+    nofill()
+def dance(degrees, ntimes):
+    for X in range(ntimes):
+        rt(degrees/2)
+        lt(degrees/2)
+ 
